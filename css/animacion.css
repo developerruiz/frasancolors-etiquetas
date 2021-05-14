@@ -1,0 +1,29 @@
+/* // ANIMACIONES */
+/* ANIMACION DE FORMULARIO DE CONTACTO */
+.moverIzquierda{
+    animation: 2s moverIzquierda;
+}
+@keyframes moverIzquierda{
+    0%{
+        margin-left: 300px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 0;
+    }
+
+}
+/* ANIMACION DE PANTALLA DE REGISTRO EXITOSO */
+.fadeIn{
+    animation: 2s fadeIn ;   
+}
+@keyframes fadeIn{
+    0%{
+       opacity: 0;
+       
+    }   
+    100%{
+        opacity: 1;
+    }
+}

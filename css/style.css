@@ -1,0 +1,446 @@
+* {
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #c4c4c4;
+}
+
+nav .barra-1 {
+  background: #e4e4e4;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .barra-1 .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .barra-1 .logo .burger-menu {
+  width: 100px;
+  text-align: center;
+}
+
+nav .barra-1 .logo .burger-menu i {
+  font-size: 2.5rem;
+  color: #121212;
+  cursor: pointer;
+}
+
+nav .barra-1 .logo .img-logo {
+  position: absolute;
+  width: 130px;
+  left: 45%;
+  margin: 0 auto;
+}
+
+nav .barra-1 .logo .img-logo a {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+}
+
+nav .barra-1 .logo .img-logo a img {
+  width: 100%;
+  height: auto;
+}
+
+nav .barra-1 .logo .text-usuario {
+  color: #121212;
+}
+
+nav #check {
+  display: none;
+}
+
+nav #check:checked ~ .menu-slide {
+  display: block;
+}
+
+nav .menu-slide {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+nav .menu-slide .menu-lateral {
+  top: 0;
+  background: #e4e4e4;
+  z-index: 99;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  left: -300px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+nav .menu-slide .menu-lateral .header-menu-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #000080;
+  height: 50px;
+  padding-left: 20px;
+  position: fixed;
+  width: 300px;
+}
+
+nav .menu-slide .menu-lateral .header-menu-slide i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+nav .menu-slide .menu-lateral .header-menu-slide p {
+  margin-left: 20px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #fff;
+}
+
+nav .menu-slide .menu-lateral .header-menu-slide .btn-cerrar {
+  display: block;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+nav .menu-slide .menu-lateral .header-menu-slide .btn-cerrar:hover {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide {
+  overflow-y: scroll;
+  height: 100%;
+  padding-top: 50px;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide a {
+  text-decoration: none;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide a li {
+  width: 100%;
+  list-style: none;
+  padding-left: 20px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000080;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide a li span {
+  padding: 0 20px;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide a li:hover {
+  background: fade(#eb9b25, 90%);
+  color: #eb9b25;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide p {
+  font-weight: 600;
+  color: #eb9b25;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+nav .menu-slide .menu-lateral .lista-menu-slide .divisor {
+  border-top: 8px solid rgba(0, 0, 0, 0.1);
+}
+
+nav .menu-slide.active {
+  background: rgba(0, 0, 0, 0.781);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+nav .menu-lateral.active {
+  left: 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+section .btnAct {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+section .grid,
+section .grid_second,
+section .grid_tres {
+  margin: 0 auto;
+  width: 80%;
+}
+
+section .grid table,
+section .grid_second table,
+section .grid_tres table {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #fff;
+  text-align: center;
+  background: #fff;
+}
+
+section .grid table .title-table,
+section .grid_second table .title-table,
+section .grid_tres table .title-table {
+  background: steelblue;
+}
+
+section .grid table .title-table td:nth-child(n-5),
+section .grid_second table .title-table td:nth-child(n-5),
+section .grid_tres table .title-table td:nth-child(n-5) {
+  color: #fff;
+}
+
+section .grid table td,
+section .grid_second table td,
+section .grid_tres table td {
+  border: 1px solid #e4e4e4;
+}
+
+section .grid table .ver_mas,
+section .grid_second table .ver_mas,
+section .grid_tres table .ver_mas {
+  color: blue;
+}
+
+section .grid .det_producto,
+section .grid_second .det_producto,
+section .grid_tres .det_producto {
+  visibility: hidden;
+  height: 0;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
+section .conatiner-etiqueta {
+  background: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+section .conatiner-etiqueta .ticked {
+  width: 380px;
+  height: 500px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+
+section .conatiner-etiqueta .ticked .datos {
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta .ticked .datos-producto {
+  height: 100px;
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta .ticked .codigoBarra {
+  margin: 0 24px;
+  position: relative;
+  bottom: 0;
+}
+
+section .conatiner-etiqueta .ticked .codigoBarra canvas {
+  width: 100%;
+  height: 115px;
+  margin: 0 auto;
+}
+
+section .conatiner-etiqueta .btn-imprimir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+section .conatiner-etiqueta-second {
+  background: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+section .conatiner-etiqueta-second .tickedtwo {
+  width: 380px;
+  height: 85%;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  -webkit-transition: 10s ease-in;
+  transition: 10s ease-in;
+}
+
+section .conatiner-etiqueta-second .tickedtwo .datos {
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta-second .tickedtwo .datos-producto {
+  height: 100px;
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta-second .tickedtwo .codigoBarra {
+  margin: 0 24px;
+  position: relative;
+  bottom: 0;
+}
+
+section .conatiner-etiqueta-second .tickedtwo .codigoBarra canvas {
+  width: 100%;
+  height: 115px;
+  margin: 0 auto;
+}
+
+section .conatiner-etiqueta-second .btn-imprimir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+section .conatiner-etiqueta-tres {
+  background: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+section .conatiner-etiqueta-tres .tickedtres {
+  width: 380px;
+  height: 85%;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  -webkit-transition: 10s ease-in;
+  transition: 10s ease-in;
+}
+
+section .conatiner-etiqueta-tres .tickedtres .datos {
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta-tres .tickedtres .datos-producto {
+  height: 100px;
+  margin: 40px 40px 0 40px;
+}
+
+section .conatiner-etiqueta-tres .tickedtres .codigoBarra {
+  margin: 0 24px;
+  position: relative;
+  bottom: 0;
+}
+
+section .conatiner-etiqueta-tres .tickedtres .codigoBarra canvas {
+  width: 100%;
+  height: 115px;
+  margin: 0 auto;
+}
+
+section .conatiner-etiqueta-tres .btn-imprimir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

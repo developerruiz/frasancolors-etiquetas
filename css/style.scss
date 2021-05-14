@@ -1,0 +1,423 @@
+$color-fondo: #c4c4c4;
+// $color-principal: ;
+// $color-secundario: ;
+
+
+* {
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $color-fondo;
+}
+
+nav {
+    .barra-1 {
+        background: #e4e4e4;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .burger-menu {
+                width: 100px;
+                text-align: center;
+
+                i {
+                    font-size: 2.5rem;
+                    color: #121212;
+                    cursor: pointer;
+                }
+            }
+
+            .img-logo {
+                position: absolute;
+                // background: #000;
+                width: 130px;
+                left: 45%;
+                margin: 0 auto;
+
+                a {
+                    margin: 0 auto;
+                    display: flex;
+                    width: 100px;
+
+                    img {
+
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .text-usuario {
+                color: #121212;
+            }
+        }
+
+
+    }
+
+    #check {
+        display: none;
+    }
+
+    #check:checked~.menu-slide {
+        display: block;
+    }
+
+    .menu-slide {
+        -webkit-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+
+
+        .menu-lateral {
+
+            top: 0;
+            background: #e4e4e4;
+            z-index: 99;
+            position: fixed;
+            width: 300px;
+            height: 100%;
+            left: -300px;
+            -webkit-transition: 0.3s ease-in;
+            -o-transition: 0.3s ease-in;
+            transition: 0.3s ease-in;
+
+            // mover fuera de menulaateral si no detecta el css
+
+
+            .header-menu-slide {
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                background: #000080;
+                height: 50px;
+                padding-left: 20px;
+                position: fixed;
+                width: 300px;
+
+
+                i {
+                    font-size: 2.5rem;
+                    color: #fff;
+
+                }
+
+                p {
+                    margin-left: 20px;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    margin-top: 15px;
+                    color: #fff;
+                }
+
+                .btn-cerrar {
+                    display: block;
+                    position: absolute;
+                    left: 90%;
+                    cursor: pointer;
+                    -webkit-transition: 0.2s ease-in;
+                    -o-transition: 0.2s ease-in;
+                    transition: 0.2s ease-in;
+
+                }
+
+                .btn-cerrar:hover {
+                    transform: rotate(120deg);
+                    -webkit-transition: 0.2s ease-in;
+                    -o-transition: 0.2s ease-in;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            .lista-menu-slide {
+
+                overflow-y: scroll;
+                height: 100%;
+                padding-top: 50px;
+
+                a {
+                    text-decoration: none;
+
+                    li {
+
+
+                        width: 100%;
+                        list-style: none;
+                        padding-left: 20px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        color: #000080;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        text-decoration: none;
+
+
+                        span {
+                            padding: 0 20px;
+                        }
+
+
+                    }
+
+                    li:hover {
+                        background: fade(#eb9b25, 90%);
+                        color: #eb9b25;
+                    }
+
+                }
+
+                p {
+                    font-weight: 600;
+                    color: #eb9b25;
+                    font-size: 16px;
+                    padding-left: 20px;
+                }
+
+                .divisor {
+                    border-top: 8px solid rgba(0, 0, 0, .1);
+                }
+            }
+        }
+    }
+
+    .menu-slide.active {
+
+        background: rgba(0, 0, 0, 0.781);
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        -webkit-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+    }
+
+    .menu-lateral.active {
+        left: 0;
+        -webkit-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+
+    }
+}
+
+section {
+    .btnAct {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .grid,
+    .grid_second,
+    .grid_tres {
+        margin: 0 auto;
+        width: 80%;
+
+        table {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #fff;
+            text-align: center;
+            background: #fff;
+
+            .title-table {
+                background: steelblue;
+
+                td:nth-child(n-5) {
+                    color: #fff;
+                }
+            }
+
+            td {
+                border: 1px solid #e4e4e4;
+            }
+
+            .ver_mas {
+                color: blue;
+            }
+        }
+
+        .det_producto {
+            visibility: hidden;
+            height: 0;
+            transition: .3s ease-in;
+        }
+    }
+
+    .conatiner-etiqueta {
+        background: rgba(0, 0, 0, .85);
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        transition: all .5s ease-in;
+
+        .ticked {
+            width: 380px;
+            height: 500px;
+            background: #fff;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 25px;
+
+            .datos {
+                margin: 40px 40px 0 40px;
+            }
+            .datos-producto{
+                height: 100px;
+                margin: 40px 40px 0 40px;
+            }
+
+            .codigoBarra {
+                margin: 0 24px;
+                position: relative;
+                bottom: 0;
+                canvas{
+                    width: 100%;
+                    height: 115px;
+                    margin: 0 auto ;
+                }
+
+            }
+        }
+
+     
+        .btn-imprimir {
+            display: flex;
+            bottom: 0;
+            position: absolute;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    
+    .conatiner-etiqueta-second{
+        background: rgba(0, 0, 0, .85);
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        transition: all .5s ease-in;
+
+        .tickedtwo {
+            width: 380px;
+            height: 85%;
+            background: #fff;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 25px;
+            transition: 10s ease-in;
+            
+
+
+            .datos {
+                margin: 40px 40px 0 40px;
+            }
+            .datos-producto{
+                height: 100px;
+                margin: 40px 40px 0 40px;
+            }
+
+            .codigoBarra {
+                margin: 0 24px;
+                position: relative;
+                bottom: 0;
+                canvas{
+                    width: 100%;
+                    height: 115px;
+                    margin: 0 auto ;
+                }
+
+            }
+        }
+
+        .btn-imprimir {
+            display: flex;
+            bottom: 0;
+            position: absolute;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .conatiner-etiqueta-tres{
+        background: rgba(0, 0, 0, .85);
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        transition: all .5s ease-in;
+
+        .tickedtres {
+            width: 380px;
+            height: 85%;
+            background: #fff;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 25px;
+            transition: 10s ease-in;
+            
+
+
+            .datos {
+                margin: 40px 40px 0 40px;
+            }
+            .datos-producto{
+                height: 100px;
+                margin: 40px 40px 0 40px;
+            }
+
+            .codigoBarra {
+                margin: 0 24px;
+                position: relative;
+                bottom: 0;
+                canvas{
+                    width: 100%;
+                    height: 115px;
+                    margin: 0 auto ;
+                }
+
+            }
+        }
+
+        .btn-imprimir {
+            display: flex;
+            bottom: 0;
+            position: absolute;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+}
